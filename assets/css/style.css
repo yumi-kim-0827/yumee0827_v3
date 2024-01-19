@@ -1,0 +1,302 @@
+@charset "utf-8";
+@font-face {
+  font-family: 'GowunBatang-Regular';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2108@1.1/GowunBatang-Regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+@import url('https://fonts.googleapis.com/css2?family=Gowun+Batang:wght@400;700&display=swap');
+body{margin:0;padding:0;font-family: 'Gowun Batang', serif;}
+.wrap{overflow:hidden;margin:0 auto;width:100%;max-width:1920px;font-family: 'Gowun Batang', serif;}
+section{overflow:hidden;}
+/****************** lib : 로딩 웹퍼블리셔 김유미 *********************/
+#load{position:fixed;top:0;left:0;bottom:0;right:0;width:100%;height:100vh;background-color:#0a0a0f;z-index:9999;overflow: hidden;}
+#load .load_inner{display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;height:100%;}
+#load .load_inner img{max-width:350px;width:100%;}
+/****************** lib : 헤더 웹퍼블리셔 김유미 *********************/
+header{position:relative;margin:0 auto;width:100%;max-width:1920px;height:100px;padding:0 20px;position:fixed;top:0;left:0;right:0;background-color:rgba(255,255,255,1);z-index:9999;border-bottom:1px solid #f2f2f2f8;}
+header .gnb_area{display:flex;height:100%;flex-direction:row;justify-content:space-between;}
+header .gnb_area .gnb_menu nav{height:100%;}
+header > div > div{height:100%;display:flex;flex-direction:column;justify-content:center;align-items: stretch;}
+header .gnb_area .gnb_menu nav > ul{height:100%;display:flex;list-style:none;justify-content:space-between;text-align:center;align-items:center;z-index:1;}
+header .gnb_menu nav > ul li.main_menu {display:flex;align-items:center;margin:0; padding:0;height:100%;}
+header .gnb_menu nav ul li.main_menu a {display:block; padding:10px; color:#000; text-decoration:none;font-family: 'Gowun Batang', serif;font-size:1.375rem;}
+header .gnb_menu nav .sub_menu {display:none; position:absolute; top:100px;left:0;width:100%;height:80px;background-color:#fff;align-items:center;border-bottom:1px solid #f2f2f2f8;}
+header .gnb_menu nav .sub_menu li { display:block; position:relative; }
+header .gnb_menu nav .sub_menu li a { padding:10px; color:#000; display:block; text-decoration:none;font-family: 'Gowun Batang', serif;font-size:1.125rem;}
+header .gnb_menu nav ul li:hover > .sub_menu {display:flex;justify-content:center;}
+header .gnb_menu nav ul li.main_menu:hover{border-bottom:2px solid #f0330a;}
+header .gnb_right{max-width:220px;display:flex;flex-direction:row;justify-content:space-between;}
+header .gnb_right .contact_ym{width:152px;height:100%;background-color:#f0330a;}
+header .gnb_right .contact_ym button{width:100%;height:100%;color:#fff;font-size:1rem;border:none;outline:none;background-color:#f0330a;font-family: 'Gowun Batang', serif;}
+header .gnb_right .right_menu{text-align:center;display:flex;flex-direction:column;justify-content:center;}
+header .offcanvas .offcanvas-header{height:auto;align-items:flex-end;}
+header .offcanvas .offcanvas-body{justify-content:flex-start;}
+header .offcanvas .offcanvas-body nav ul{display:flex;flex-direction:column;}
+header .offcanvas .offcanvas-body nav ul li{padding:0.5rem 0;}
+header .offcanvas .offcanvas-body nav ul li a{display:block;font-size:1.375rem;color:#000;}
+header .offcanvas .offcanvas-body nav ul li a:hover{color:#f0330a}
+header .offcanvas .offcanvas-body button{margin:0.5rem 0 0 0;padding:1rem 0;background-color:#f0330a;color:#fff;}
+@media screen and (max-width:1440px) {
+  header .gnb_menu nav ul li.main_menu a{font-size:1.2rem;}
+}
+@media screen and (max-width:991px) {
+  header{height:80px;}
+  header .gnb_menu{display:none;}
+  header .right_menu button{font-size:3rem;}
+  header .offcanvas .offcanvas-body nav ul li a{font-size:2rem;}
+  header .offcanvas-body button{padding:2rem;font-size:2rem;}
+}
+@media screen and (max-width:425px) {
+  header .gnb_logo img{width:70%;}
+  header .gnb_right .contact_ym{width:100px;}
+}
+/****************** lib : 푸터 웹퍼블리셔 김유미 *********************/
+footer{padding:80px 100px;color:#fff;background-color:#0a0a0f;}
+footer .footer_inner{margin:0 auto;width:100%;max-width:1920px;display:flex;flex-direction:row;justify-content:space-between;}
+footer .footer_inner .footer_info{display:flex;flex-direction:column;justify-content:space-between;font-size:0.875rem;color:#c3c3db;}
+footer .footer_inner .footer_info ul:first-child{display:flex;}
+footer .footer_inner .footer_info ul:first-child li{padding:0 1rem 0 0;}
+footer .footer_inner .footer_info p{padding:15px 0 0 0;font-size:0.8rem;color:#4e4e68;}
+footer .footer_inner .footer_contact ul{display:flex;}
+footer .footer_inner .footer_contact ul li{padding:0 0 0 1.25rem;}
+footer .footer_inner .footer_contact ul li a{font-size:1.5rem;color:#fff;transition:all 0.5s;}
+footer .footer_inner .footer_contact ul li a:hover{color:#f0330a;}
+footer .footer_inner .footer_contact ul li a i{transform:rotate(-45deg);}
+@media screen and (max-width:1440px) {
+  footer{padding:5%;color:#fff;}
+  footer .footer_inner>div{width:50%;}
+
+  footer .footer_inner .footer_contact ul{flex-direction:column;text-align:right;}
+}
+@media screen and (max-width:1024px) {
+  footer .footer_inner .footer_info ul{display:flex;flex-direction:column;}
+}
+@media screen and (max-width:375px) {
+  footer .footer_inner{flex-direction:column;}
+  footer .footer_inner>div{width:100%;}
+  footer .footer_inner .footer_contact{order:1;}
+  footer .footer_inner .footer_info{order:2;}
+  footer .footer_inner .footer_contact ul{text-align:left;}
+  footer .footer_inner .footer_contact ul li{padding:0 0 1rem 0;}
+}
+/****************** page : 홈 웹퍼블리셔 김유미 *********************/
+#main_id{display:none;}
+.main_visual{width:100%;height:980px;}
+.main_slide{position:relative;width:100%;height:100%;}
+.main_slide .swiper {width: 100%;font-family: 'Gowun Batang', serif;}
+.main_slide .mySwiper2{position:absolute;height:100%;width:100%;z-index:1000; }
+.main_slide .mySwiper2 .swiper-slide .img_container img{width:100%;height:auto;transition:transform 0.3s ease-out;object-fit:cover; }
+.main_slide .mySwiper2 .swiper-slide .slide_txt{position:absolute;left:100px;z-index:2000;top:250px;font-family: 'Gowun Batang', serif;color:#fff;}
+.main_slide .mySwiper2 .swiper-slide .slide_txt span a{color:#f0330a;}
+.main_slide .mySwiper2 .swiper-slide .slide_txt h2{font-size:10rem;color:#f0330a;}
+.main_slide .mySwiper2 .swiper-slide .slide_txt p{font-size:1.625rem;}
+.main_slide .mySwiper2 .swiper-slide .slide_txt p span{padding-left:20px;font-size:1rem;}
+.main_slide .swiper { width: 100%; margin-left: auto; margin-right: auto; }
+.main_slide .mySwiper{position:absolute;bottom:100px;left:50%;transform:translateX(-50%);z-index:8000;width:90%;max-width:1720px !important;height:230px;}
+.main_slide .mySwiper .swiper-slide {padding:40px;width:25%;height:100%;border-top-left-radius:30px;background-color:rgba(0,0,0,0.8);color:#fff;font-weight:bold;}
+.main_slide .mySwiper .swiper-slide span{padding-right:10px;}
+.main_slide .mySwiper .swiper-slide span img{display:inline-block;width:auto;margin-bottom:3px;}
+.main_slide .mySwiper .swiper-slide p:last-child{padding-top:20px;font-size:0.875rem;color:#fff}
+.main_slide .mySwiper .swiper-slide-thumb-active{background-color:rgba(255,255,255,1);color:#000;}
+.main_slide .mySwiper .swiper-slide-thumb-active p:last-child{font-size:0.875rem;color:#6f6f6f}
+.pd_100{padding:100px;background-color:#ffffff;}
+.round_c1{border-top-left-radius:200px;}
+.round_c2{border-bottom-right-radius:200px;}
+.cont_ttl{font-size:1.875rem;color:#f0330a;}
+.cont_ttl a{font-size:1.875rem;color:#f0330a;}
+.cont_detail{padding-bottom:2.5rem;font-size:2.25rem;font-weight:bold;}
+.con_divd{margin:0 auto;width:100%;display:flex;flex-direction:row;justify-content:space-between;}
+.con_divd > div{width:48%;}
+.product_tab .cont_left .nav{width:100%;max-width:455px;background-color:#fff;border-bottom:1px solid #000;}
+.product_tab .cont_left .nav > button{padding:3.125rem 0;text-align:left;font-size:1.375rem;color:#000;font-family: 'Gowun Batang', serif;border-top:1px solid #000;border-radius:0;outline:none;}
+.product_tab .cont_left .nav-pills .nav-link.active, .nav-pills .show>.nav-link{background-color:#fff !important;border-top:4px solid #f0330a;color:#f0330a;font-size:1.375rem;}
+.product_tab .cont_right .tab-content{height:100%;}
+.product_tab .cont_right .tab-content .tab-pane{height:100%;}
+.product_tab .cont_right .tab-content .tab-pane .show_img{position:relative;height:540px;background-size:contain;background-repeat:no-repeat;background-position:center;overflow:hidden;}
+.product_tab .cont_right .tab-content .tab-pane:nth-child(1) .show_img{background-image:url(../../images/product_img1.png);}
+.product_tab .cont_right .tab-content .tab-pane:nth-child(2) .show_img{background-image:url(../../images/product_img2.png);}
+.product_tab .cont_right .tab-content .tab-pane:nth-child(3) .show_img{background-image:url(../../images/product_img3.png);}
+.product_tab .cont_right .tab-content .tab-pane:nth-child(odd) .show_img img{position:absolute;}
+.product_tab .cont_right .tab-content .tab-pane:nth-child(odd) .show_img img:first-child{top:0;left:0;animation: i_ani1 2s  ease-in-out infinite;}
+@keyframes i_ani1 {
+  0% {top:0;left:0;}
+  50% {top:10px;left:5px;}
+  100% {top:0;left:0;}
+  }
+.product_tab .cont_right .tab-content .tab-pane .show_img img:last-child{bottom:0;right:0;animation: i_ani2 1.6s  ease-in-out infinite;}
+@keyframes i_ani2 {
+  0% {bottom:0;right:0;}
+  50% {bottom:8px;right:8px;}
+  100% {bottom:0;right:0;}
+  }
+.product_tab .cont_right .tab-content .tab-pane:nth-child(even) .show_img img{position:absolute;}
+.product_tab .cont_right .tab-content .tab-pane:nth-child(even) .show_img img:first-child{top:0;right:0;animation: i_ani3 2s  ease-in-out infinite;}
+@keyframes i_ani3 {
+  0% {top:0;right:0;}
+  50% {top:10px;right:5px;}
+  100% {top:0;right:0;}
+}
+.product_tab .cont_right .tab-content .tab-pane:nth-child(even) .show_img img:last-child{bottom:0;left:0;animation: i_ani4 1.6s  ease-in-out infinite;}
+@keyframes i_ani4 {
+  0% {bottom:0;left:0;}
+  50% {bottom:8px;left:8px;}
+  100% {bottom:0;left:0;}
+}
+.show_btn1{text-align:center;}
+.show_btn1 button{padding:1rem 2.5rem;border-radius:200px;border:1px solid #000;background-color:rgba(255,255,255,1);transition:all 0.5s;}
+.show_btn1 button:hover{background-color:#f0330a;color:#fff;border:1px solid #f0330a;}
+.show_btn2{text-align:center;}
+.show_btn2 button{padding:1rem 2.5rem;border-radius:200px;background-color:#f0330a;transition:all 0.5s;color:#fff;border:1px solid #f0330a;}
+.show_btn2 button:hover{background-color:#fff;color:#000;border:1px solid #000;}
+.product_src label{width:100%;text-align:center;color:#f0330a;font-size:1.875rem;}
+.product_src .input-group{margin:0 auto;width:100%;max-width:935px;height:80px;border:4px solid #000;border-radius:200px;overflow:hidden;}
+.product_src .input-group .form-control{border:none;}
+.main_video .cont_left .show_btn2{text-align:left;padding:1rem 0 0 0;}
+.main_video .video-wrap{position:relative;padding-bottom:56.25%;padding-top:30px;height:0;overflow:hidden;}
+.main_video .video-wrap iframe,.video-wrap object,.video-wrap embed{position:absolute;top:0;left:0;width:100%;height:100%;}
+@media screen and (max-width:1440px) {
+  .pd_100{padding:5%;}
+  .round_c1{border-top-left-radius:0;}
+  .round_c2{border-bottom-right-radius:0;}
+  .main_visual{height:800px;}
+  .main_slide .mySwiper{bottom:50px;}
+  .main_slide .mySwiper .swiper-slide{padding:1.8rem;height:auto;}
+  .main_slide .mySwiper2 .swiper-slide .slide_txt{width:80%;left:5%;}
+  .main_slide .mySwiper2 .swiper-slide .slide_txt h2{font-size:6rem;}
+  .main_slide .mySwiper2 .swiper-slide .slide_txt p{font-size:1.3rem;}
+  .main_slide .mySwiper2 .swiper-slide .img_container{height:100%;}
+  .main_slide .mySwiper2 .swiper-slide .img_container img{height:100%;object-fit: fill;}
+}
+@media screen and (max-width:991px) {
+  main{padding-bottom:4rem;}
+  .main_slide .mySwiper .swiper-wrapper{display:none;}
+  .main_slide .mySwiper2 .swiper-slide .img_container img{object-fit:cover;}
+  .main_slide .mySwiper2 .swiper-slide .slide_txt span a{display:block;}
+  .con_divd{flex-direction:column;}
+  .con_divd > div{width:100%;}
+  .product_tab .cont_left .nav{max-width:100%;justify-content:space-between;border-bottom:0;}
+  .product_tab .cont_left .nav button{padding:1rem 0;width:32%;text-align:center;border:none;}
+  .product_tab .cont_left .nav-pills .nav-link.active, .nav-pills .show>.nav-link{background-color:#fff !important;color:#f0330a;font-size:1.375rem;border:none;border-bottom:2px solid #f0330a;}
+  .product_tab .cont_right .tab-content .tab-pane .show_img{margin-top:2rem;height:400px;background-size:60%;}
+  .product_src .input-group .form-control{padding:0 0 0 1.8rem;font-size:1.8rem;}
+  .product_src .input-group i{font-size:1.8rem;}
+  .product_src{padding:4rem 0;}
+  .cont_detail{padding-bottom:1rem;}
+  .show_btn1 button{width:100%;height:58px;}
+  .main_video .cont_left .show_btn2{padding:0 0 2rem 0;}
+  .main_video .cont_left .show_btn2 button{width:100%;height:58px;}
+}
+@media screen and (max-width:425px) {
+  .product_tab .cont_right .tab-content .tab-pane .show_img{height:280px;}
+  .product_tab .cont_right .tab-content .tab-pane .show_img img{width:16%;}
+}
+/****************** page : 회사소개 웹퍼블리셔 김유미*********************/
+.page_topbanner{padding-top:100px;}
+.page_topbanner .page_ttl{padding:4.5rem 0 0 100px;}
+.page_topbanner .page_ttl h2{color:#f0330a;font-size:2.5rem;font-weight:bold;}
+.page_topbanner .page_navi{display:flex;padding:0 0 0 100px;border-top:1px solid #f2f2f2;border-bottom:1px solid #f2f2f2;}
+.navi_dropdown {border-right:1px solid #f2f2f2;}
+.navi_dropdown button{color:#000;font-family: 'Gowun Batang', serif;}
+.navi_dropdown .dropdown-toggle::after{color:#6f6f6f;}
+.navi_dropdown .btn-check:focus+.btn, .btn:focus{box-shadow:none;}
+.page_topbanner .page_navi{margin-top:1rem;}
+.page_topbanner .page_navi .page_home{width:38px;border-left:1px solid #f2f2f2;border-right:1px solid #f2f2f2;text-align:center;display:flex;flex-direction:column;justify-content:center;}
+.page_topbanner .page_navi .page_home a{color:#f0330a;}
+.page_detail h3{padding-bottom:1rem;font-size:1.875rem;color:#f0330a;font-weight:bold;}
+.page_detail > p{padding-bottom:1rem;font-size:1.375rem;}
+.page_detail .ceo_img{position:relative;width:30%;height:580px;background-image:url(../../images/ceo.png);background-size:contain;background-repeat:no-repeat;background-position:top left;}
+.page_detail .ceo_img img{position:absolute;left:-10px;bottom:20px;animation: i_ani5 2s  ease-in-out infinite;}
+@keyframes i_ani5 {
+  0% {left:-10px;bottom:20px;}
+  50% {left:10px;bottom:10px;}
+  100% {left:-10px;bottom:20px;}
+}
+.page_detail .ceo_message{width:65%;font-size:1.125rem;}
+.page_detail .ceo_message span{display:block;text-align:right;}
+.page_detail .ceo_message img{float:right;clear:both;}
+.page_detail .video-wrap{position:relative;padding-bottom:56.25%;padding-top:30px;height:0;overflow:hidden;border-radius:20px;overflow:hiddenl}
+.page_detail .video-wrap iframe,.video-wrap object,.video-wrap embed{position:absolute;top:0;left:0;width:100%;height:100%;}
+
+.page_detail .location ul.nav li button{padding:0;color:#000;font-family: 'Gowun Batang', serif;font-size:1.375rem;}
+.page_detail .location ul.nav li button::after{margin:0 1rem;content:'';display:inline-block;width:1px; height:16px;background-color:#acacac;}
+.page_detail .location ul.nav li:last-child button::after{display:none;}
+.page_detail .location .nav-pills .nav-link.active{background-color:#fff !important;color:#f0330a;text-decoration:underline;}
+.page_detail .location .mySwiper .swiper-slide img{width:100%;}
+.page_detail .location .address{padding-top:1rem;display:flex;justify-content:space-between;color:#6f6f6f;}
+@media screen and (max-width:1440px) {
+  .page_topbanner .page_ttl{padding:4.5rem 0 0 5%;}
+  .page_topbanner .page_navi{padding:0 0 0 5%;}
+  .page_detail .ceo_img{width:45%;}
+  .page_detail .ceo_img img{display:none;}
+  .page_detail .ceo_message{width:50%;}
+}
+@media screen and (max-width:991px) {
+  .page_detail .ceo_img{width:100%;height:200px;margin-bottom:1rem;}
+  .page_detail .location ul.nav li button{font-size:1.6rem;}
+  .page_detail .location .address{flex-direction:column; justify-content:flex-start;font-size:1.125rem;}  
+  .page_detail .ceo_message img{width:20%;}
+  .page_detail .ceo_message{width:100%;}
+}
+
+/****************** page : 산업 페이지 웹퍼블리셔 김유미 *********************/
+.product_tap .product_btn .filter-button{padding:0;color:#6f6f6f;font-family: 'Gowun Batang', serif;font-size:1.375rem;}
+.product_tap .product_btn .filter-button::after{margin:0 1rem;content:'';display:inline-block;width:1px; height:16px;background-color:#acacac;}
+.product_tap .product_btn .filter-button:last-child::after{display:none;}
+.product_tap .product_btn .filter-button:hover{background-color:#fff !important;color:#f0330a;text-decoration:underline;}
+.product_tap .product_list{padding:1rem 0 0 0;display:grid;grid-template-columns:repeat(3, 1fr);grid-gap:20px;gap:20px;}
+.product_tap .product_list .product_wrap{position:relative;overflow:hidden;}
+.product_tap .product_list .product_wrap:after {content: ""; display: block; padding-bottom:100%; }
+.product_tap .product_list .product_wrap .product_img{position:absolute;top:0;left:0;width:100%;height:85%;border:1px solid #f2f2f2;border-radius:1.25rem;border:1px solid #f2f2f2;overflow:hidden;}
+.product_tap .product_list .product_wrap .product_img img {width:100%;object-fit:cover;-webkit-transform: scale(1); transform: scale(1); -webkit-transition: .3s ease-in-out; transition: .3s ease-in-out;}
+.product_tap .product_list .product_wrap .product_img:hover img{-webkit-transform: scale(1.3); transform: scale(1.3); }
+.product_tap .product_list .product_wrap .product_txt{padding:0.5rem 0 0 0;position:absolute;bottom:0;left:0;height:15%;font-size:1rem;}
+.product_tap .product_list .product_wrap .product_txt p{color:#000;font-weight:bold;}
+.product_tap .product_list .product_wrap .product_txt span{color:#0a0a0f;}
+.page_src{margin-bottom:4.6rem;}
+@media screen and (max-width:991px) {
+  .product_tap .product_list{grid-template-columns:repeat(2, 1fr);grid-gap:10px;gap:10px;}
+}
+@media screen and (max-width:425px) {
+  .product_tap .product_list{grid-template-columns:repeat(1, 1fr);grid-gap:10px;gap:10px;}
+}
+
+/****************** page : 제품 상세페이지 웹퍼블리셔 김유미 *********************/
+.product_detail{display:flex;flex-direction:column;}
+.product_detail>div{padding:2rem 0;}
+.product_detail .prd_top{display:flex;}
+.product_detail .prd_top .prd_thumb{width:40%;border-radius:20px;overflow:hidden;}
+.product_detail .prd_top .prd_thumb img{width:100%;}
+.product_detail .prd_top .prd_summary{display:flex;flex-direction:column;padding:0 2rem; width:60%;}
+.product_detail .prd_top .prd_summary .prd_category, .product_detail .prd_top .prd_summary .prd_ttl{font-size:1.875rem;color:#000;font-weight:bold;}
+.product_detail .prd_top .prd_summary .prd_point ul li{font-size:1.2rem;}
+.product_detail .prd_top .prd_summary .prd_btn{margin-top:auto;}
+.product_detail .prd_top .prd_summary .prd_btn ul{display:flex;flex-direction:row;justify-content:flex-end;}
+.product_detail .prd_top .prd_summary .prd_btn ul li{padding-left:1rem;}
+.product_detail .prd_top .prd_summary .prd_btn ul li button{padding:1rem 2.5rem;border-radius:200px;border:1px solid #464C53;background-color:#fff;color:#464C53;font-family: 'Gowun Batang', serif;font-size:1.375rem;}
+.product_detail .prd_top .prd_summary .prd_btn ul li button.prd_order{background-color:#f0330a;color:#fff;border:1px solid #f0330a;}
+.product_detail .prd_top .prd_summary .prd_btn ul li button.prd_share{padding:0; width:67px;height:67px;}
+.product_detail .prd_btm img{width:100%;max-width:fit-content;}
+@media screen and (max-width:1280px) {
+  .product_detail .prd_top .prd_summary .prd_btn ul li button{padding:1rem;font-size:1rem}
+  .product_detail .prd_top .prd_summary .prd_btn ul li button.prd_share{width:58px;height:58px;}
+}
+@media screen and (max-width:991px) {
+  .product_detail .prd_top{flex-direction:column;}
+  .product_detail .prd_top>div{width:100% !important;}
+  .product_detail .prd_top .prd_summary{padding:2rem 0;}
+  .product_detail .prd_top .prd_summary .prd_btn{margin:0;}
+  .product_detail .prd_top .prd_summary .prd_btn ul{flex-direction:column;}
+  .product_detail .prd_top .prd_summary .prd_btn ul li{padding:1rem 0;}
+  .product_detail .prd_top .prd_summary .prd_btn ul li button{width:100%;height:58px;font-size:1.6rem;}
+  .product_detail .prd_top .prd_summary .prd_btn ul li button.prd_share{width:100%;}
+}
+
+
+
+
+
+
+
+
+
